@@ -1,0 +1,14 @@
+connections {
+    a, b, c, d, e, f, g, h, i
+    a1, a2, a3
+}
+virtual_points {
+    v1, v2, v3
+}
+distances {
+    (usb, v1, 3)
+    (v1, v2, 10), (v2, v3, 12)
+    (a, v1, 1), (a1, a, 0), (a2, a, 0), (a3, a, 0), (b, v1, 2), (c, v1, 3),
+    (d, v2, 1), (e, v2, 2), (f, v2, 3), (g, v2, 1), (h, v3, 5), (i, v3, 7)
+    (a, v1,4,v3,5)
+} 

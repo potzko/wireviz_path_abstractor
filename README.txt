@@ -57,7 +57,7 @@ Distances {
   (usb_hub_out_2, screen, 10), (screen, mouse, 20), (screen, keyboard, 40)
 }
 
-Now, let's take the wireviz first example:
+Now, let's look at a sample wireviz file
 
 connectors:
   X1:
@@ -174,3 +174,6 @@ You can also change modes in the middle of the path:
 #@length dist A D path C B
 "shortest path from A to D, then add the length from connections (D, C) and then (C, B)"
 length: 15 #path A -> C -> D -> C -> B
+
+when there are multiple options with the same length, the tool does not guerentee which option will be picked, it also does not guerentee being determenistic, if you want a specific path you will have to mark it via the path mode
+the tool does not check having only one #@length per wireviz object, if you have multiple length parameters this tool will work regularly but the actual behavior of wireviz will be based on it's specification

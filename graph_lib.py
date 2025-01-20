@@ -13,21 +13,21 @@ class graph:
     
     def standard_path(self, start, target):
         if not start in self.nodes:
-            raise Exception(f"node {start} not declares a connection or virtual point")
+            raise Exception(f"node {start} is not a connection or virtual point")
         if not target in self.nodes[start][1]:
             raise Exception(f"tried following the path {start} -> {target} however {start} -> {target} does not exist")
         return self.nodes[start][1][target], [target]
 
     def dist_path(self, start, target):
         if not start in self.processed_graph:
-            raise Exception(f"node {start} not declares a connection or virtual point")
+            raise Exception(f"node {start} is not a connection or virtual point")
         if not target in self.processed_graph[start]:
             raise Exception(f"no path exists from {start} to {target}")
         return self.processed_graph[start][target]
     
     def norm_path(self, start, target):
         if not start in self.processed_graph_normalised:
-            raise Exception(f"node {start} not declares a connection or virtual point")
+            raise Exception(f"node {start} is not a connection or virtual point")
         if not target in self.processed_graph_normalised[start]:
             raise Exception(f"no path exists from {start} to {target}")
         return self.processed_graph_normalised[start][target]
